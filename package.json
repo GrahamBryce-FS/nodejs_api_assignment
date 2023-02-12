@@ -1,0 +1,16 @@
+{
+  "name": "nodejs_api_assignment",
+  "version": "1.0.0",
+  "description": "NODE API ASSIGNMENT",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "NodeJS",
+    "Restful",
+    "API"
+  ],
+  "author": "Bryce Graham",
+  "license": "MIT"
+}
