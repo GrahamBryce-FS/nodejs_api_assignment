@@ -1,5 +1,5 @@
 const express = require("express");
-const router = require("../router/router")
+const router = require("../router/router");
 const app = express();
 
 // use middleware
@@ -11,7 +11,7 @@ app.get("/health",(req,res,next) =>{
 });
 
 // use middleware for our router
-app.use('/api', router);
+app.use('/breeds', router);
 //  error handler
 app.use((req,res,next)=>{
     const error = new Error("Not Found");
