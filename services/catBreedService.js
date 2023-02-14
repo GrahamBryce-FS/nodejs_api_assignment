@@ -13,12 +13,3 @@ const getOneCatBreed = async (id) => {
     
 // https://catfact.ninja/#/Facts go to this website
 module.exports = { getCatBreeds, getOneCatBreed };
-    
-    
-    
-    
-    
-    // const getOneCatBreed = async (breed) => {
-    //     console.log("Fetching One Cat Breed");
-    //     return await axios.get(`${process.env.url}${breed}`);
-    // };

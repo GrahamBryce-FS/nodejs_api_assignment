@@ -1,10 +1,26 @@
 const { getCatBreeds, getOneCatBreed } = require("./catBreedService");
 
+//jest.mock('./catBreedService');
+
 // 3 types of jest is describe, test, expect
 
 describe("Cat Breed Service Test", ()=>{
-    test('As a Student I want to get a cat Breed', async() => {
+    test('As a Student I want to get 10 cat Breeds', async() => {
         const result = await getCatBreeds();
-        expect(result.data)
+        // expect(result.data).toHaveLength(10)
+        expect(result.data[8].breed).toEqual("Asian")
+        expect(result.data[8].country).toEqual("developed in the United Kingdom (founding stock from Asia)")
+        expect(result.data[8].origin).toEqual("")
+        expect(result.data[8].coat).toEqual("Short")
+        expect(result.data[8].pattern).toEqual("Evenly solid")
+    });
+
+    test('As a Student I want to get 1 cat breed', async() => {
+        const result = await getOneCatBreed(1);
+        expect(result.data.breed).toEqual("Abyssinian")
+        expect(result.data.country).toEqual("Ethiopia")
+        expect(result.data.origin).toEqual("Natural/Standard")
+        expect(result.data.coat).toEqual("Short")
+        expect(result.data.pattern).toEqual("Ticked")
     });
 });
