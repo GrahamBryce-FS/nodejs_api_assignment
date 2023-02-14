@@ -21,7 +21,6 @@ router.get('/', (req, res, next) => {
 
 router.get('/:id', (req,res,next)=>{
         console.log("besting");
-        // const limit = req.query.limit;
         getOneCatBreed(req.params.id)
         .then((result) =>{
                 res.status(200).json(result.data);
